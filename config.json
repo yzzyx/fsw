@@ -1,0 +1,20 @@
+{
+	"server": "localhost",
+	"port": 1234,
+	"key": "xXKxkxkxXMMX",
+	"name": "some-server",
+	"collectors": [
+		{ "type": "sql",
+			"driver": "postgres",
+			"datasource": "user=elias password=elias database=test",
+			"query": "SELECT id, name FROM users",
+			"interval": 60
+		},
+		{ "type": "sql",
+			"driver": "postgres",
+			"datasource": "user=elias password=elias database=test",
+			"query": "SELECT 'aaaa' || name FROM users",
+			"interval": 100
+		}
+	]
+}
